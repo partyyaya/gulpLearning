@@ -1,7 +1,9 @@
 ## Gulp使用方法
 ### Gulp用途:方便管理任務流程與製作程式打包
 <a id="top"></a>
-### <a href="#s1">gulp 起手式</a>
+#### - <a href="#s1">gulp 起手式</a>
+#### - <a href="#s2">打包壓縮 CSS 與 JS</a>
+#### - <a href="#s3">打包壓縮 HTML</a>
 ### <a id="s1" href="#top">gulp 起手式</a>
 ---
 - 安裝node 環境
@@ -33,7 +35,7 @@ gulp.task('webserver', function() {
 gulp.task('default',['webserver']);
 ```
 
-### 打包壓縮 CSS 與 JS
+### <a id="s2" href="#top">打包壓縮 CSS 與 JS</a>
 ---
 - 新建專案資料夾並用cmd進入 打npm init初始化製作package.jason
 - 輸入指令安裝 gulp、gulp-minify-css、gulp-uglify、gulp-concat、gulp-rename
@@ -105,7 +107,7 @@ gulp.task('uglify', function() {
 gulp.task('default',['minify-css','uglify']);
 ```
 
-### 打包壓縮 HTML
+### <a id="s3" href="#top">打包壓縮 HTML</a>
 ---
 - 新建專案資料夾並用cmd進入 打npm init初始化製作 package.jason
 - 打包壓縮 HTML 會用到的套件有：gulp-html-replace、gulp-minify-html,並會用到上篇的套件
