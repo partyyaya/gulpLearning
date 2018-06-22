@@ -7,6 +7,11 @@
 ## Gulp(自動任務運行)使用方法
 ### Gulp用途:方便管理任務流程與製作程式打包
 
+- #### <a href="#s1">gulp 起手式</a> ------------可參考 : gulpWebserver
+- #### <a href="#s2">打包壓縮 CSS 與 JS</a> ------可參考 : gulpPackage
+- #### <a href="#s3">打包壓縮 HTML</a> ----------可參考 : gulpPackage
+- #### <a href="#s4">打造 SCSS/SASS 環境</a> ----------可參考 : gulpSCSS
+
 #### Gulp的核心API有4个：src、dest、task、watch
 - gulp.src(globs[, options]) : 指向源文件路径<br/>
     globs：路径模式匹配； <br/>
@@ -22,10 +27,7 @@
     glob：路径模式匹配； <br/>
     opts：可以选配置对象； <br/>
     taks：执行的任务；<br/>
-
-- #### <a href="#s1">gulp 起手式</a> ------------可參考 : gulpWebserver
-- #### <a href="#s2">打包壓縮 CSS 與 JS</a> ------可參考 : gulpPackage
-- #### <a href="#s3">打包壓縮 HTML</a> ----------可參考 : gulpPackage
+    
 ### <a id="s1" href="#top">gulp 起手式</a>
 ---
 - 安裝node 環境 (建議選左邊LTS：較穩定版本) : https://nodejs.org/en/
@@ -40,7 +42,7 @@
 - 建立一個index.html 放進 app資料夾裡
 - 建立一個js檔案 : gulpfile.js 內容如下 
 - 執行 gulp 即可察看結果 按下ctrl+c即可停止運作
-- gulpfile.js
+- gulpfile.js :　
 ```javascript
 //gulp.task 程式裡面有兩個任務，分別名為「webserver」和「default」
 //gulp.task('default',['webserver'])又有一個很重要的涵義，就是 default 這個任務相依於 webserver 任務
@@ -245,4 +247,35 @@ gulp.task('default', ['html-replace','minify-css', 'uglify']);
 </head>
 <body></body>
 </html>
+```
+### <a id="s4" href="#top">打造 SCSS/SASS 環境</a>
+---
+- 先安裝Ruby 並在command 下 gem install compass 指令安裝compass
+- 新建資料夾並用cmd進入 打npm init初始化製作 package.jason
+- 並安裝套件 : npm install gulp gulp-compass -save-dev
+- 在新建的資料夾創建 style 資料夾 再創建 css scss 資料夾
+- 創建 gulpfile.js 並寫入代碼 :
+- 一樣使用 gulp 就可執行
+```javascript
+//引入套件
+var gulp = require('gulp'),
+    compass   = require('gulp-compass');
+
+gulp.task('compass',function(){
+    return gulp.src('./style/scss/*.scss')//抓取資料夾內所有scss檔案
+        .pipe(compass({
+            sourcemap: true,//產生 sourcemap 的 json 檔案 ( css.map )，就可以從編譯出的 css，反查回原本的 scss
+            time: true,//顯示轉換經過的時間
+      css: './style/css/',//存放處理完css檔案路徑
+      sass: './style/scss/',//存放scss檔案路徑
+      style: 'compact' //nested, expanded, compact, compressed //轉換出來的 CSS 長相
+        }))
+        .pipe(gulp.dest('./style/css/'));
+}); 
+
+gulp.task('watch',function(){
+    gulp.watch('./style//scss/*.scss',['compass']);
+});
+
+gulp.task('default',['compass','watch']);
 ```
