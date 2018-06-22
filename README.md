@@ -1,9 +1,10 @@
+<a id="top"></a>
 ## Gulp使用方法
 ### Gulp用途:方便管理任務流程與製作程式打包
-<a id="top"></a>
-#### - <a href="#s1">gulp 起手式</a>
-#### - <a href="#s2">打包壓縮 CSS 與 JS</a>
-#### - <a href="#s3">打包壓縮 HTML</a>
+
+- #### <a href="#s1">gulp 起手式</a>
+- #### <a href="#s2">打包壓縮 CSS 與 JS</a>
+- #### <a href="#s3">打包壓縮 HTML</a>
 ### <a id="s1" href="#top">gulp 起手式</a>
 ---
 - 安裝node 環境
