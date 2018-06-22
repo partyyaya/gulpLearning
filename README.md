@@ -28,7 +28,7 @@
 - #### <a href="#s3">打包壓縮 HTML</a> ----------可參考 : gulpPackage
 ### <a id="s1" href="#top">gulp 起手式</a>
 ---
-- 安裝node 環境 (建議選左邊LTS：較穩定版本) :　https://nodejs.org/en　
+- 安裝node 環境 (建議選左邊LTS：較穩定版本) : https://nodejs.org/en/
 - 測試 : 在 command 輸入 node -v 與 npm -v 若有看到 <版本號> 及代表安裝成功
 - 安裝gulp 環境 : npm install gulp -g
 - -g : 代表安裝在電腦全域環境(任一路徑都可使用)
