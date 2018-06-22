@@ -36,7 +36,7 @@ gulp.task('uglify', function() {
 
 gulp.task('html-replace',function() {
   var opts = {comments:false,spare:false,quotes:true};
-  return gulp.src('./app/*.html')
+  return gulp.src('./app/*.ejs')
     .pipe(htmlreplace({
         'css': 'css/all.min.css',
         'js': 'js/all.min.js'
