@@ -5,21 +5,20 @@
 ### Gulp用途:方便管理任務流程與製作程式打包
 
 ### Gulp的核心API有4个：src、dest、task、watch
-- gulp.src(globs[, options]) : 指向源文件路径
-    <pre>globs：路径模式匹配； 
-    options：可選参数</pre>
-- gulp.dest(path[, options])：指明執行完文件输出路徑 
-    <pre>path：路径（一个任務可以有多个输出路徑）； 
-    options：可選参数；</pre>
-- gulp.task(name[, deps], fn)：安排任務 
-    <pre>name：任務名稱（使用 gulp name 執行任務）； 
-    deps：可选的数组，在本任务运行中所需要所依赖的其他任务（当前任务在依赖任务执行完毕后才会执行）； 
-    fn：任务函数（function方法）；</pre>
-- gulp.watch(glob [, opts], tasks)：監聽文件並運行相對的任務 
-    <pre>glob：路径模式匹配； 
-    opts：可以选配置对象； 
-    taks：执行的任务；
-</pre>
+- gulp.src(globs[, options]) : 指向源文件路径<br/>
+    globs：路径模式匹配； <br/>
+    options：可選参数<br/>
+- gulp.dest(path[, options])：指明執行完文件输出路徑 <br/>
+    path：路径（一个任務可以有多个输出路徑）； <br/>
+    options：可選参数；<br/>
+- gulp.task(name[, deps], fn)：安排任務 <br/>
+    name：任務名稱（使用 gulp name 執行任務）； <br/>
+    deps：可选的数组，在本任务运行中所需要所依赖的其他任务（当前任务在依赖任务执行完毕后才会执行）； <br/>
+    fn：任务函数（function方法）；<br/>
+- gulp.watch(glob [, opts], tasks)：監聽文件並運行相對的任務 <br/>
+    glob：路径模式匹配； <br/>
+    opts：可以选配置对象； <br/>
+    taks：执行的任务；<br/>
 
 - #### <a href="#s1">gulp 起手式</a> ------------可參考 : gulpWebserver
 - #### <a href="#s2">打包壓縮 CSS 與 JS</a> ------可參考 : gulpPackage
