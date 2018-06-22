@@ -25,12 +25,13 @@
 - #### <a href="#s3">打包壓縮 HTML</a> ----------可參考 : gulpPackage
 ### <a id="s1" href="#top">gulp 起手式</a>
 ---
-- 安裝node 環境 :　https://nodejs.org/en/　建議選左邊：較穩定版本
+- 安裝node 環境 :　https://nodejs.org/en　(建議選左邊：較穩定版本)
 - 測試 : 在 command 輸入 node -v 與 npm -v 若有看到 <版本號> 及代表安裝成功
 - 安裝gulp 環境 : npm install gulp -g
 - -g : 代表安裝在電腦全域環境(任一路徑都可使用)
 - --save : 安裝至當前資料夾裡面,並在package.jason 的 dependencies 增加 模組 版本號
 - --save-dev : 安裝至當前資料夾裡面,並在package.jason 的 devDependencies 增加 模組 版本號
+- 安裝完成可用 : gulp -v 查詢 gulp 版本號
 - 新建專案資料夾並用cmd進入 打npm init初始化製作package.jason
 - 安裝gulp 測試環境 : npm install gulp --save-dev
 - 建立一個js檔案 : gulpfile.js 內容如下
