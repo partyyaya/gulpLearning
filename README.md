@@ -4,7 +4,7 @@
 ## Gulp(自動任務運行)使用方法
 ### Gulp用途:方便管理任務流程與製作程式打包
 
-### Gulp的核心API有4个：src、dest、task、watch
+#### Gulp的核心API有4个：src、dest、task、watch
 - gulp.src(globs[, options]) : 指向源文件路径<br/>
     globs：路径模式匹配； <br/>
     options：可選参数<br/>
@@ -33,9 +33,10 @@
 - --save-dev : 安裝至當前資料夾裡面,並在package.jason 的 devDependencies 增加 模組 版本號
 - 安裝完成可用 : gulp -v 查詢 gulp 版本號
 - 新建專案資料夾並用cmd進入 打npm init初始化製作package.jason
-- 安裝gulp 測試環境 : npm install gulp --save-dev
-- 建立一個js檔案 : gulpfile.js 內容如下
+- 安裝gulp 測試環境 : npm install gulp-livereload gulp-webserver --save-dev
 - 建立一個index.html 放進 app資料夾裡
+- 建立一個js檔案 : gulpfile.js 內容如下 
+- 執行 gulp 即可察看結果 按下ctrl+c即可停止運作
 ```javascript
 //gulp.task 程式裡面有兩個任務，分別名為「webserver」和「default」
 //gulp.task('default',['webserver'])又有一個很重要的涵義，就是 default 這個任務相依於 webserver 任務
@@ -63,7 +64,7 @@ gulp.task('default',['webserver']);
 ---
 - 新建專案資料夾並用cmd進入 打npm init初始化製作package.jason
 - 輸入指令安裝 gulp、gulp-minify-css、gulp-uglify、gulp-concat、gulp-rename
-- npm install gulp gulp-minify-css gulp-uglify gulp-concat gulp-rename 
+- npm install gulp-minify-css gulp-uglify gulp-concat gulp-rename 
 -save-dev
 - gulp-concat：合併檔案
 - gulp-minify-css：壓縮 CSS
@@ -73,8 +74,8 @@ gulp.task('default',['webserver']);
 - _app : _css , _js 
 - _build : (會自動產生css,js資料夾)
 - gulpfile.js 
-- 在 gulpfile.js 寫下代碼 : 
 - 執行 gulp 即可察看結果
+- 在 gulpfile.js 寫下代碼 : 
 ```javascript
 var gulp       = require('gulp'),
     concat     = require('gulp-concat'),
