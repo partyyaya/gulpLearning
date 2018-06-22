@@ -1,5 +1,8 @@
 <a id="top"></a>
 #### 此文本為方便學習,使用各個文章的精華結合,更加深入了解 gulp 的使用
+##### 參考資源 :　
+- https://github.com/zhonglimh/Gulp
+- http://www.oxxostudio.tw/articles/201503/gulp-install-webserver.html
 
 ## Gulp(自動任務運行)使用方法
 ### Gulp用途:方便管理任務流程與製作程式打包
