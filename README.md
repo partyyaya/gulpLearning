@@ -5,7 +5,8 @@
 ### Gulp用途:方便管理任務流程與製作程式打包
 
 ### Gulp的核心API有4个：src、dest、task、watch
-- gulp.src(globs[, options]) : 指向源文件路径 
+<pre>
+- gulp.src(globs[, options]) : 指向源文件路径
     globs：路径模式匹配； 
     options：可選参数
 - gulp.dest(path[, options])：指明執行完文件输出路徑 
@@ -19,6 +20,7 @@
     glob：路径模式匹配； 
     opts：可以选配置对象； 
     taks：执行的任务；
+</pre>
 
 - #### <a href="#s1">gulp 起手式</a> ------------可參考 : gulpWebserver
 - #### <a href="#s2">打包壓縮 CSS 與 JS</a> ------可參考 : gulpPackage
