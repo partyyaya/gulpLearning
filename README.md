@@ -1,6 +1,6 @@
 <a id="top"></a>
 #### 此文本為方便學習,使用各個文章的精華結合,更加深入了解 gulp 的使用
-##### 參考資源 :　
+#### 參考資源 :　
 - https://github.com/zhonglimh/Gulp
 - http://www.oxxostudio.tw/articles/201503/gulp-install-webserver.html
 
@@ -28,7 +28,7 @@
 - #### <a href="#s3">打包壓縮 HTML</a> ----------可參考 : gulpPackage
 ### <a id="s1" href="#top">gulp 起手式</a>
 ---
-- 安裝node 環境 :　https://nodejs.org/en　(建議選左邊：較穩定版本)
+- 安裝node 環境 (建議選左邊LTS：較穩定版本) :　https://nodejs.org/en　
 - 測試 : 在 command 輸入 node -v 與 npm -v 若有看到 <版本號> 及代表安裝成功
 - 安裝gulp 環境 : npm install gulp -g
 - -g : 代表安裝在電腦全域環境(任一路徑都可使用)
