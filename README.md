@@ -41,23 +41,29 @@
 //gulp.task 程式裡面有兩個任務，分別名為「webserver」和「default」
 //gulp.task('default',['webserver'])又有一個很重要的涵義，就是 default 這個任務相依於 webserver 任務
 //因此輸入gulp就可以執行 default，也可以輸入gulp.webserver就可以直接執行webserver這個任務
-//gulp.src是指這個任務工作的目標資料夾，pipe則是這個任務的流程
 //directoryListing:代表樹狀圖是否開啟,open:是否自動開啟index.html
 var gulp = require('gulp');
+var livereload = require('gulp-livereload'); //網頁自動更新（服务器控制客户端同步刷新）
 var webserver = require('gulp-webserver');
 
+//註冊任務
 gulp.task('webserver', function() {
-  gulp.src('./app/')
+  gulp.src('./app/')//開啟的開始目錄
     .pipe(webserver({
-      port:1234,
-      livereload: true,
-      directoryListing: false,
-      open: true,
+      port:1234,//選擇port號
+      livereload: true,// 啟用LiveReload
+      directoryListing: false,//是否顯示來源樹狀圖
+      open: true,//是否處理完自動開啟網頁
       fallback: 'index.html'
     }));
 });
 
-gulp.task('default',['webserver']);
+//監聽任務
+gulp.task('watch',function(){
+	gulp.watch( '*.html', ['html']) // 監聽根目錄下所有.html文件
+});
+
+gulp.task('default',['webserver','watch']);
 ```
 
 ### <a id="s2" href="#top">打包壓縮 CSS 與 JS</a>
