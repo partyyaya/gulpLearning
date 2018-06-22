@@ -248,7 +248,7 @@ gulp.task('default', ['html-replace','minify-css', 'uglify']);
 <body></body>
 </html>
 ```
-### <a id="s4" href="#top">打造 SCSS/SASS 環境</a>
+### <a id="s4" href="#top">打造 SCSS 編輯環境</a>
 ---
 - 先安裝Ruby 並在command 下 gem install compass 指令安裝compass
 - 新建資料夾並用cmd進入 打npm init初始化製作 package.jason
