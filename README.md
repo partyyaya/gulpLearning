@@ -10,7 +10,7 @@
 - #### <a href="#s1">gulp 起手式</a> ------------可參考 : gulpWebserver
 - #### <a href="#s2">打包壓縮 CSS 與 JS</a> ------可參考 : gulpPackage
 - #### <a href="#s3">打包壓縮 HTML</a> ----------可參考 : gulpPackage
-- #### <a href="#s4">打造 SCSS/SASS 環境</a> ----------可參考 : gulpSCSS
+- #### <a href="#s4">打造 SCSS 編輯環境</a> ----------可參考 : gulpSCSS
 
 #### Gulp的核心API有4个：src、dest、task、watch
 - gulp.src(globs[, options]) : 指向源文件路径<br/>
@@ -158,7 +158,7 @@ gulp.task('default',['minify-css','uglify']);
 - 製作各項目錄 : ( _ : 代表資料夾=>_app=名稱為app的資料夾)
 - _app : _css , _js , index.html(欲壓縮html文檔)
 - _build : (會自動產生css,js資料夾)
-- gulpfile.js 
+- 製作 gulpfile.js 
 - 設置 html 文本
 ```HTML
 <!DOCTYPE html>
@@ -256,6 +256,7 @@ gulp.task('default', ['html-replace','minify-css', 'uglify']);
 - 在新建的資料夾創建 style 資料夾 再創建 css scss 資料夾
 - 創建 gulpfile.js 並寫入代碼 :
 - 一樣使用 gulp 就可執行
+- gulpfile.js :
 ```javascript
 //引入套件
 var gulp = require('gulp'),
