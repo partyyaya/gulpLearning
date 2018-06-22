@@ -40,6 +40,7 @@
 - 建立一個index.html 放進 app資料夾裡
 - 建立一個js檔案 : gulpfile.js 內容如下 
 - 執行 gulp 即可察看結果 按下ctrl+c即可停止運作
+- gulpfile.js
 ```javascript
 //gulp.task 程式裡面有兩個任務，分別名為「webserver」和「default」
 //gulp.task('default',['webserver'])又有一個很重要的涵義，就是 default 這個任務相依於 webserver 任務
