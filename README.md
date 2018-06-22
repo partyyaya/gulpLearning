@@ -1,8 +1,8 @@
 ## Gulp使用方法
 ### Gulp用途:方便管理任務流程與製作程式打包
 <a id="top"></a>
-<a href="#s1">### gulp 起手式</a>
-<a id="s1" href="#top">### gulp 起手式</a>
+### <a href="#s1">gulp 起手式</a>
+### <a id="s1" href="#top">gulp 起手式</a>
 ---
 - 安裝node 環境
 - 安裝gulp 環境 : npm install gulp -g
